@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Setup</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+      {{ form.csrf_token }}
+      <div class="form-group">
+        <label for="spotify_app_key">Spotify App Key</label>
+        {{ form.app_key(class_="form-control", placeholder="app_key") }}
+        {% if form.app_key.errors %}
+          <div class="alert alert-danger" role="alert">
+            <ul class="errors">{% for error in form.app_key.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+          </div>
+        {% endif %}
+        <small id="fileHelp" class="form-text text-muted">An app key is required.  This is used to allow libspotify to access Spotify.</small>
+      </div>
+
+      <div class="form-group">
+      <label for="username">Spotify Credentials</label>
+        {{ form.username(class_="form-control", placeholder="username") }}
+        {% if form.username.errors %}
+          <div class="alert alert-danger" role="alert">
+            <ul class="errors">{% for error in form.username.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.password(class_="form-control", placeholder="password") }}
+        <small class="form-text text-muted">If you created your Spotify account using Facebook, you can use your Facebook email address and request your password from Facebook. See the <a href="https://www.facebook.com/help/249378535085386?helpref=uf_permalink" target="_blank">Facebook App Password Help Page</a> to obtain your App Password .</small>
+
+        {% if form.password.errors %}
+          <div class="alert alert-danger" role="alert">
+            <ul class="errors">{% for error in form.password.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+          </div>
+        {% endif %}
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </form>
+{% endblock %}

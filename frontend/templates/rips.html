@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Rips</h1>
+
+    <hr/>
+    <a href="/new_rip" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Create New Rip</a>
+    <br/>
+    <div id="rip-list">
+    </div>
+
+    {% raw %}
+    <script type="template" id="rip-template">
+      <div class="rip-item">
+        <div class="rip-item-title">
+          <span class="glyphicon glyphicon glyphicon-plus rip-item-details-toggle" aria-hidden="true" data-toggle-section="rip-id-<%- id %>"></span>
+          <span class="rip-item-status-icon-span"></span>
+          <span class="rip-item-save-icon-span"></span>
+          <span class="rip-item-title-text"><%- name %></span>
+
+          <div class="progress-bar-section"></div>
+          <span class="time-remaining"></span>
+        </div>
+
+        <div class="rip-item-details start-hidden" id="rip-id-<%- id %>">
+            <div class="song-list"></div>
+            <div class="error-list"></div>
+        </div>
+
+      <hr/>
+      </div>
+    </script>
+    {% endraw %}
+
+{% endblock %}
+
+{% block additional_js %}
+    <script>
+    {% include "script.js" %}
+    </script>
+
+{% endblock %}

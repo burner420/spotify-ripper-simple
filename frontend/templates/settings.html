@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Settings</h1>
+
+    <form method="POST">
+      {{ form.csrf_token }}
+
+      <div class="form-group">
+        <label for="format_string">File Format</label>
+        {{ form.format_string(class_="form-control") }}
+          <p class="help-block">See <a href="https://github.com/SolidHal/spotify-ripper#user-content-format-string" target="_blank">formatting rules</a> for more info.</p>
+        {% if form.format_string.errors %}
+          <div class="alert alert-danger" role="alert">
+            <ul class="errors">{% for error in form.format_string.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+          </div>
+        {% endif %}
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </form>
+{% endblock %}

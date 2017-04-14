@@ -1,0 +1,62 @@
+#content{
+	margin-top:100px;
+}
+
+#rip-list{
+	margin-top:30px;
+}
+
+#rip-list .glyphicon{
+	font-size:150%;
+	margin-right:10px;
+}
+
+.rip-item-title-text{
+	font-size:150%;
+}
+
+.rip-item-details{
+	padding-left:50px;
+}
+
+
+.rip-item-title .progress{
+    margin-top:10px;
+    margin-bottom:0px;
+}
+
+.rip-item-details .song-name{
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+.start-hidden{
+	display:none;
+}
+
+.green{
+	color:#78c578;
+}
+.red{
+	color:#d98686;
+}
+.grey{
+    color:#e0e0e0;
+}
+
+.invisible{
+	visibility:hidden;
+}
+
+.template{
+    display:none;
+}
+
+.rotate{
+    animation:spin 6s linear infinite;
+    -webkit-animation:spin 6s linear infinite;
+    -moz-animation:spin 6s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
