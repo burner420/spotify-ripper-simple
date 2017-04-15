@@ -26,19 +26,19 @@ ii) Extract the downloaded zip file to a folder on your computer
 ## 3. Build Image
 This step may take some time (5-10 minutes) to install, configure and build the software.
 
-### Linux/OSX
+### OSX & Linux
 i) Open Terminal
 
-ii) Navigate to the extracted folder from the previous step - `cd /my/folder/spotify-ripper-simple`
+ii) Navigate to the extracted folder from the previous step - for example: `cd ~/Downloads/spotify-ripper-simple`
 
 iii) Build Image - `docker build -t spotify-ripper-simple .`
 
 ### Windows
 i) Open Command Prompt - Start -> Run -> cmd.exe
 
-ii) Navigate to the extracted folder from the previous step - `cd /my/folder/spotify-ripper-simple`
+ii) Navigate to the extracted folder from the previous step - `cd c:\\Users\me\Downloads\spotify-ripper-simple`
 
-iii) Build Image - `docker build -t spotify-ripper-simple .`
+iii) Build Image - `docker build -t spotify-ripper-simple .` Note the period on the end of the command.
 
 ## 4. Start Software
 i) Start Software - from the terminal (or windoze command prompt) issue the command: `docker run -d -p 5000:5000 spotify-ripper-simple`
