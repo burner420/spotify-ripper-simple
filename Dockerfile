@@ -5,7 +5,7 @@ RUN mkdir -p /app/spotify-ripper-simple
 # INSTALL DEPENDENCIES
 RUN apt update
 RUN apt upgrade -y
-RUN apt install software-properties-common python-software-properties git -y --no-install-recommends
+RUN apt install software-properties-common python-software-properties git locales -y --no-install-recommends
 RUN apt-add-repository multiverse -y
 RUN apt update -y
 RUN apt install build-essential automake autoconf wget -y --no-install-recommends
