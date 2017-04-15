@@ -31,14 +31,14 @@ i) Open Terminal
 
 ii) Navigate to the extracted folder from the previous step - for example: `cd ~/Downloads/spotify-ripper-simple`
 
-iii) Build Image - `docker build -t spotify-ripper-simple .`
+iii) Build Image - `docker build -t spotify-ripper-simple .` **note the period on the end of the command**
 
 ### Windows
 i) Open Command Prompt - Start -> Run -> cmd.exe
 
 ii) Navigate to the extracted folder from the previous step - `cd c:\\Users\me\Downloads\spotify-ripper-simple`
 
-iii) Build Image - `docker build -t spotify-ripper-simple .` Note the period on the end of the command.
+iii) Build Image - `docker build -t spotify-ripper-simple .` **note the period on the end of the command**
 
 ## 4. Start Software
 i) Start Software - from the terminal (or windoze command prompt) issue the command: `docker run -d -p 5000:5000 spotify-ripper-simple`
